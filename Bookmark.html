@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+   
+    <!-- nav bar -->
+   <nav class="container relative mx-auto p-6 ">
+    <div class="flex items-center justify-between space-x-20 my-6 space-y-0 "> 
+
+    <div class="z-30"> 
+      <!-- logo -->
+      <img src="./images/logo-bookmark.svg" alt="" id="logo">
+    </div>
+
+      <div class="sm:hidden items-center space-x-10 md:flex lg:flex xl:flex uppercase text-grayishBlue">
+        <!-- menu items -->
+          
+          <a href="#features" class="tracking-wider hover:text-softRed"> FEATURES</a>
+          <a href="#download"  class="tracking-wider hover:text-softRed"> DOWNLOAD</a>  
+          <a href="#faq-accordion"  class="tracking-wider hover:text-softRed"> FAQ</a>
+          <a href="https://bookmark.iide.co/login" target="_blank" class="px-8 py-2 text-white bg-softRed rounded-lg shadow-md hover:text-softRed hover:bg-white" >LOGIN</a>
+         </div> 
+
+         <button id="menu-btn" class="z-30 sm:block  md:hidden lg:hidden xl:hidden hamburger">
+          <img src="./images/icon-hamburger.svg" class="open">
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+         </button>
+
+    </div>
+
+
+    <!-- mobile menu  -->
+     <div id="menu" class="fixed hidden z-20 inset-0  flex-col items-center border self-end w-full h-full px-6 py-1 pt-24  pb-24 tracking-widest uppercase divide-y divide-gray-500 opacity-90 bg-veryDarkBlue">
+       
+      <div class="w-full py-3 text-center ">
+        <a href="#features">Features</a>
+      </div>
+
+      <div class="w-full py-3 text-center ">
+        <a href="#download">Download</a>
+      </div>
+
+      <div class="w-full py-3 text-center ">
+        <a href="#faq-accordion">FAQ</a>
+      </div>
+
+      <div class="w-full py-3 text-center ">
+        <a href="https://bookmark.iide.co/logi" target="_blank">Login</a>
+      </div>
+     </div>
+
+
+
+
+   </nav>
+   <!-- Hero Section -->
+    <section id="hero">
+      <!-- container form image and content  -->
+      <div class="container flex flex-col-reverse mx-auto p-6 lg:flex-row lg:mb-0 lg:items-center">
+     <!-- content left -->
+     <div class="flex flex-col space-y-10 lg:mt-16 lg:w-1/2 ">
+       <h1 class="text-3xl font-semibold text-center lg:text-4xl lg:text-left ">A simple Bookmark Manager</h1>
+       <p class="max-w-md text-lg text-center mx-auto text-grayishBlue lg:text-2xl lg:text-center lg:mt-0 lg:mx-0 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, sit repellendus! Ducimus ex omnis expedita, labore dolorem totam quasi autem maxime, modi, enim doloribus commodi vero praesentium numquam ipsa! Vitae?
+       Consectetur, ex autem doloremque assumenda labore dolorem laudantium incidunt? Doloribus, nulla architecto. Temporibus, soluta quaerat vel doloremque consequuntur accusantium explicabo quibusdam illo, nesciunt earum, consequatur saepe nisi ullam nemo recusandae.</p>
+       <div class="">
+        <a href="#" class="p-4 text-sm font-semibold bg-softBlue  rounded-2xl shadow-md border-2 border-softBlue md:text-base hover:bg-white text-white hover:text-softBlue">Get it in Chrome</a>
+        <a href="#" class="p-4  text-sm font-semibold bg-white text-grayishBlue rounded-2xl md:text-base hover:bg-grayishBlue hover:text-white ">Get it in Firefox</a>
+       </div>
+     </div>
+       <!-- image right side -->
+     <div class="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2" >
+      <div class="bg-hero">
+        <img src="./images/illustration-hero.svg" alt="" class="relative  z-10  lg:top-24 xl-top-0 overflow-x-visible">
+      </div>    
+     </div>
+
+      </div>
+    </section>
+  <!-- features section -->
+    <section id="features">
+    <div class="container mx-auto mt-16 px-6 ">
+      <h2 class="mb-6 text-4xl font-semibold text-center">FEATURES</h2>
+      <p class="max-w-md mx-auto text-center text-grayishBlue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non sunt officiis dolorum qui consequatur quaerat at natus explicabo quisquam harum? Sunt similique amet, a error exercitationem ut qui? Quas, suscipit.</p>
+    </div>
+    </section>
+
+ <!-- features tab -->
+  <section id="tabs">
+   
+  <!-- tabs/ panels container -->
+   <div  class="container relative mx-auto text-center my-6 mb-32 mt-12 p-6 ">
+    <div class="bg-tabs"></div>
+    
+      <!-- tabs flex container -->
+       <div class="flex flex-col justify-center max-w-xl mx-auto mb-6 border-b md:space-x-10 md:flex-row ">
+         <!-- tab1 -->
+          <div class="flex justify-center text-center cursor-pointer text-grayishBlue border-b md:border-b-0 hover:text-softRed md:w-1/3 tab" data-target="panel-1">
+            <div class="p-5  border-b-4 border-softRed" data-target="panel-1" > Simple Bookmark</div>
+          </div>
+           <!-- tab2 -->
+            <div  class="flex justify-center text-center cursor-pointer text-grayishBlue border-b md:border-b-0 hover:text-softRed md:w-1/3 tab" data-target="panel-2">
+              <div class="p-5  border-b-4" data-target="panel-2">Speedy Searching</div>
+            </div>
+             <!-- tab3 -->
+              <div  class="flex justify-center text-center cursor-pointer text-grayishBlue border-b md:border-b-0 hover:text-softRed md:w-1/3 tab" data-target="panel-3">
+                <div  class="p-5  border-b-4 " data-target="panel-3">Easy Sharing</div>
+              </div>
+     
+    </div>
+   </div>
+   <!-- tab panels  -->
+    <div id="panels" class="container mx-auto ">
+   <!-- panel-1 -->
+    <div class="flex flex-col py-5 md:flex-row md:space-x-7 panel panel-1">
+      <!-- panel image -->
+      <div class="flex justify-center md:w-1/2 ">
+     <img src="./images/illustration-features-tab-1.svg" alt="" class="relative z-10 "> 
+      </div>
+
+     <!-- panel content -->
+      <div class="flex flex-col space-y-8 md:w-1/2" >
+        <h3 class="mt-32 text-3xl  font-semibold text-center md:mt-0 md:text-left "> Bookmark in one click </h3>
+        <p class="max-w-md  text-center text-grayishBlue md:text-left"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit sapiente sint architecto accusamus repellat recusandae est, aperiam explicabo esse impedit nostrum, veritatis ea sed! Aspernatur earum voluptatem optio doloribus ex.
+        Fuga beatae similique inventore ducimus accusantium modi quam natus voluptates sed, perspiciatis veritatis commodi quidem qui nostrum laboriosam sapiente velit quasi totam molestiae est adipisci? Earum sit sunt quisquam temporibus.
+        Enim illum unde quos sunt consequatur ea laboriosam quasi id nulla aperiam sequi atque deserunt aliquam dolor fugiat temporibus molestias laborum exercitationem iste, dignissimos culpa porro distinctio facilis hic? Voluptatum.</p>
+        <div class="mx-auto md:mx-0">
+          <a href="#" class="px-6 py-3 text-sm font-semibold bg-softBlue  rounded-2xl shadow-md border-2 border-softBlue md:text-base hover:bg-white text-white hover:text-softBlue">More Info</a>
+        </div>
+      </div>
+
+    </div>
+    
+    <!-- panel -2  -->
+    <div class=" hidden flex flex-col py-5 md:flex-row md:space-x-7 panel panel-2">
+      <!-- panel image -->
+      <div class="flex justify-center md:w-1/2 ">
+     <img src="./images/illustration-features-tab-1.svg" alt="" class="relative z-10 "> 
+      </div>
+
+     <!-- panel content -->
+      <div class="flex flex-col space-y-8 md:w-1/2 " >
+        <h3 class="mt-32 text-3xl  font-semibold text-center md:mt-0 md:text-left "> Bookmark panel2 </h3>
+        <p class="max-w-md  text-center text-grayishBlue md:text-left"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nobis iste repudiandae, animi harum, tempore, culpa laudantium exercitationem dolorem recusandae quibusdam? Sed fugiat repudiandae porro voluptas, aliquam alias rerum quidem.
+        Eum, suscipit! Possimus reiciendis laudantium veritatis quibusdam amet itaque, necessitatibus doloremque culpa excepturi consequatur nam at autem molestiae aliquid, mollitia assumenda labore repellat molestias blanditiis fugiat, odio earum vitae totam?
+        Iure dolor impedit cupiditate provident ea. Quos mollitia quia similique beatae dolorum maxime ducimus? Corporis, voluptas molestiae! Perspiciatis vero natus architecto voluptatibus nobis delectus dolorum iusto, magni, aliquam facilis corporis.</p>
+        <div class="mx-auto md:mx-0">
+          <a href="#" class="px-6 py-3 text-sm font-semibold bg-softBlue  rounded-2xl shadow-md border-2 border-softBlue md:text-base hover:bg-white text-white hover:text-softBlue">More Info</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- panel-3 -->
+
+    <div class="flex flex-col hidden py-5 md:flex-row md:space-x-7 panel panel-3 ">
+      <!-- panel image -->
+      <div class="flex justify-center md:w-1/2 ">
+     <img src="./images/illustration-features-tab-1.svg" alt="" class="relative z-10 "> 
+      </div>
+
+     <!-- panel content -->
+      <div class="flex flex-col space-y-8 md:w-1/2 " >
+        <h3 class="mt-32 text-3xl  font-semibold text-center md:mt-0 md:text-left "> Bookmark in one click </h3>
+        <p class="max-w-md  text-center text-grayishBlue md:text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam neque rerum esse sequi quos hic. Beatae, reprehenderit. Fuga suscipit temporibus nesciunt cupiditate? Quod minus ipsa delectus molestiae dolor modi reiciendis.
+        Ipsa iure cum nihil laboriosam tenetur esse? Reiciendis sed dolorum reprehenderit, possimus aut suscipit magnam iure unde eius et accusamus modi similique vitae. Magni autem libero quo sed sit ratione?
+        Quia, voluptates autem! Illo rem quas nisi aliquam voluptatem, accusamus reiciendis mollitia ipsa nulla blanditiis id unde, quis at ipsam odit dignissimos beatae qui tempore sunt non quasi maiores reprehenderit.</p>
+        <div class="mx-auto md:mx-0">
+          <a href="#" class="px-6 py-3 text-sm font-semibold bg-softBlue  rounded-2xl shadow-md border-2 border-softBlue md:text-base hover:bg-white text-white hover:text-softBlue">More Info</a>
+        </div>
+      </div>
+</div>
+    </div>
+    </div>
+  </section>
+     
+
+  <!-- Downlaod heading -->
+
+
+    <section id="download">
+ <div class="container mx-auto px-6 mt-16 ">
+  <h2 class="mb-6 text-3xl  font-semibold text-center   md:text-4xl" >Download The Extention</h2>
+  <p class="max-w-lg mx-auto text-center text-grayishBlue">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam vero temporibus expedita nihil laborum iste iure atque, nostrum eum, facere ipsam eveniet voluptate dolorem. Quaerat quae quisquam eos voluptates veritatis.
+  Culpa, commodi obcaecati? Blanditiis, error aspernatur natus commodi laboriosam itaque, ipsa quas fugiat sed consequuntur facilis nisi voluptate vitae voluptatum similique aut sequi quasi esse laborum labore officia illum porro.
+  Facere magni, reprehenderit corrupti ipsam odio, quisquam deserunt nostrum sunt error eaque sapiente repellat repudiandae minima eius veritatis dolorum fuga perferendis! Quos pariatur beatae, architecto velit facere temporibus ducimus veritatis!
+  </p>
+ </div>
+    </section>
+
+    <section id="download-boxea" class="py-32">
+<!-- box container -->
+  <div class="relative flex  flex-col items-center max-w-5xl mx-auto space-y-10 px-10 md:px-6 md:space-y-0 md:space-x-7 md:flex-row ">
+    <!-- box-1 -->
+    <div class="flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3 ">  
+      <!-- image -->
+      <div class="flex justify-center">
+       <img src="./images/logo-chrome.svg" alt="">
+     </div>
+     
+     <!-- text -->
+     <h5 class="pt-6 text-xl font-bold ">Add to chrome</h5>
+     <p class="text-grayishBlue">Minimum Version 1.2.3 </p>
+     <!-- dot -->   <div class="border-dotted  px-6 pt-6 capitalize">
+     <a href="" class="block w-full py-3 text-white duration-200 border-2 rounded-lg bg-softBlue  hover:bg-white hover:text-softBlue"> Add & Install Extention</a>
+     </div>
+         </div>
+
+         <!-- box-2 -->
+         <div class="flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3 ">  
+          <!-- image -->
+          <div class="flex justify-center">
+           <img src="./images/logo-firefox.svg" alt="">
+         </div>
+         
+         <!-- texyt -->
+         <h5 class="pt-6 text-xl font-bold ">Add to Firefox</h5>
+         <p class="text-grayishBlue">Minimum Version 1.2.3 </p>
+         <!-- dot -->   <div class="border-dotted  px-6 pt-6 capitalize">
+         <a href="" class="block w-full py-3 text-white duration-200 border-2 rounded-lg bg-softBlue  hover:bg-white hover:text-softBlue"> Add & Install Extention</a>
+         </div>
+             </div>
+
+             <!-- box-3 -->
+             <div class="flex flex-col w-full py-6 space-y-4 text-center rounded-lg shadow-lg md:w-1/3 ">  
+              <!-- image -->
+              <div class="flex justify-center">
+               <img src="./images/logo-opera.svg" alt="">
+             </div>
+             
+             <!-- texyt -->
+             <h5 class="pt-6 text-xl font-bold ">Add to Opera</h5>
+             <p class="text-grayishBlue">Minimum Version 1.2.3 </p>
+             <!-- dot -->   <div class="border-dotted  px-6 pt-6 capitalize">
+             <a href="" class="block w-full py-3 text-white duration-200 border-2 rounded-lg bg-softBlue  hover:bg-white hover:text-softBlue"> Add & Install Extention</a>
+             </div>
+                 </div>
+  </div>
+   
+
+</section>
+
+
+
+<!-- FAQ heading  -->
+
+
+<div class="container mx-auto px-6 mt-4 ">
+  <h2 class="mb-6 text-3xl  font-semibold text-center   md:text-4xl" >Frequently asked Quetions</h2>
+  <p class="max-w-lg mx-auto text-center text-grayishBlue">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam vero temporibus expedita nihil laborum iste iure atque, nostrum eum, facere ipsam eveniet voluptate dolorem. Quaerat quae quisquam eos voluptates veritatis.
+  Culpa, commodi obcaecati? Blanditiis, error aspernatur natus commodi laboriosam itaque, ipsa quas fugiat sed consequuntur facilis nisi voluptate vitae voluptatum similique aut sequi quasi esse laborum labore officia illum porro.
+  Facere magni, reprehenderit corrupti ipsam odio, quisquam deserunt nostrum sunt error eaque sapiente repellat repudiandae minima eius veritatis dolorum fuga perferendis! Quos pariatur beatae, architecto velit facere temporibus ducimus veritatis!
+  </p>
+ </div>
+
+
+<!--  -->
+<section id="faq-accordion">
+<!-- main container -->
+ <div class="container mx-auto mb-32 ">
+   <!-- accordian contentainer -->
+    <diV class="max-w-2xl m-8 mx-auto overflow-hidden ">
+
+      <!-- tab1 -->
+       <div class="py-1 border-b outline-none group" tabindex="1">
+        <!-- tab flex container -->
+         <div class="flex items-center justify-between py-3 text-grayishBlue transition duration-500 cursor-pointer group">
+           <!-- tab title -->
+            <div class="transition duration-500 ease group-hover:text-green-500">
+              what is bookmark ?
+            </div>
+            <!-- arrow  --> 
+             <div class="transition duration-500 ease group-focus:-rotate-180 group-focus:text-red-500">
+              <img src="./images/icon-arrow.svg" alt="" >
+             </div>
+         </div>
+
+         <!-- tab inner content  -->
+          <div class="overflow-hidden transition duration-500 ease group-focus:max-h-screen max-h-0 ">
+            <p class="py-2 text-justify text-grayishBlue">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime reiciendis ratione optio consequatur. Distinctio iste nemo eveniet blanditiis voluptatibus tempora tenetur laboriosam rerum iusto, nobis, optio minus, nulla quisquam aut.
+            Quo laboriosam provident quae voluptatem vero? Impedit nihil porro natus consequatur, in illum voluptate cum, officia nesciunt, et dolor laudantium vero exercitationem aperiam dolorem animi quos eius molestias quasi. Earum.
+            Fuga, impedit numquam, optio labore ut reprehenderit laborum magnam doloribus iusto amet aliquam possimus dolorum accusamus officiis commodi explicabo nobis voluptatem quod id nihil perspiciatis ipsa molestias fugit corporis. Aspernatur?
+            Rerum sit reprehenderit nesciunt, possimus quo impedit quam amet neque, vitae similique officia at. Eos inventore veritatis odio iusto harum repellendus excepturi expedita sint aliquam. Minima adipisci aperiam minus ullam?
+            Impedit quasi exercitationem non vero quod nisi quae cum iure vel, adipisci harum in ipsam iusto quidem molestiae odio nemo commodi rem minus itaque possimus corrupti fugit laboriosam delectus! Facere!
+            Veritatis nostrum est facere! Quibusdam nesciunt minus eaque molestias voluptatibus quidem ducimus quam quis voluptas nam consequuntur dolorem odit, ea natus qui officiis recusandae ipsam accusamus in aliquid sed! Vero.
+            Inventore ab veritatis, cupiditate amet a obcaecati culpa minima cum deserunt ratione voluptas. Ullam quisquam temporibus, delectus quibusdam blanditiis provident. Accusamus corrupti molestias nemo quae natus aliquid quibusdam sint asperiores?
+            Repudiandae sunt dolor aspernatur, non natus fugiat nesciunt, voluptatibus porro amet deleniti, cupiditate at doloribus harum. At, enim nisi? Consectetur recusandae at eveniet cumque possimus nesciunt quaerat voluptate voluptatem sed?
+            Vitae voluptas iusto alias. Beatae voluptate in quis! Asperiores doloremque cum at velit delectus iure? Veritatis consectetur eos neque? Voluptate sequi voluptatibus vero repellat neque quos eum veritatis unde facere?
+            Tempora porro fugit fuga quidem distinctio totam deleniti, voluptates, magni consectetur beatae nihil neque nisi tenetur quam maxime, molestiae officia incidunt! Necessitatibus ad facilis explicabo praesentium aliquid repudiandae harum error.
+            Consequuntur ratione itaque, eos saepe libero sequi voluptas. Ad, dolorem! Magnam eveniet asperiores odit vero, unde amet quisquam, optio quae corporis sequi neque ea in modi minima minus aliquam ad!
+            Libero, et laudantium doloribus aliquid repellat sunt deserunt ipsam repudiandae amet quisquam minima voluptatem vitae nobis molestiae aut tempore dicta quae, soluta odit modi aspernatur maiores quibusdam natus. Cumque, praesentium!
+            Magni labore fugiat dolores distinctio, illum laboriosam natus necessitatibus aut commodi quidem suscipit maxime exercitationem voluptatum maiores, odit iste aliquid. Odio sapiente tenetur enim quae doloremque nostrum. Perspiciatis, sequi sunt!
+            Mollitia numquam beatae magni inventore ex blanditiis sed repellendus in suscipit, nesciunt soluta velit odio, neque dignissimos quae rerum, quasi quidem impedit assumenda consequatur ducimus quibusdam ratione aut illum. Sunt.
+            Alias enim laudantium, quis est quasi eligendi voluptate molestiae ab, accusantium dolores tempora, praesentium ipsum! Mollitia, neque quod at velit molestiae, quisquam sed facere maxime aliquid atque tempore, vitae numquam.
+            Magnam labore, harum pariatur obcaecati minima optio porro animi earum a. Reprehenderit accusamus facilis, ipsum beatae expedita nam magni inventore porro sint sunt at illo maiores delectus? Rem, vel placeat!
+            Eius maiores, sint labore dignissimos tempora adipisci, veniam reiciendis officia tenetur pariatur ex quam nisi ea dolorem iusto harum? Velit quae vel magni iure vitae labore? Quo voluptas rem deleniti.
+            Minima dolores labore in possimus nihil porro voluptates corrupti recusandae aliquid ut repellat maxime voluptatem dolorem laudantium corporis delectus at ducimus ipsum reprehenderit vel, voluptate aspernatur et. Soluta, est ab.
+            Optio, inventore laudantium. Facere deleniti excepturi nemo eveniet nihil. Illo dolorum officia eius eos obcaecati enim amet asperiores in nostrum voluptatum laudantium ipsam dolor, a, minus hic aliquam ratione rerum.
+            Aperiam ipsam natus illo blanditiis quia eligendi id, rerum esse earum cum odio? Ullam saepe architecto, dolore deleniti vel, voluptatum ea magnam dignissimos, quas libero placeat assumenda aliquam mollitia voluptatem.</p>
+          </div>
+       </div>
+   </diV>
+ 
+
+<!-- tab2 -->
+
+
+<diV class="max-w-2xl m-8 mx-auto overflow-hidden ">
+
+  <!-- tab1 -->
+   <div class="py-1 border-b outline-none group" tabindex="2">
+    <!-- tab flex container -->
+     <div class="flex items-center justify-between py-3 text-grayishBlue transition duration-500 cursor-pointer group">
+       <!-- tab title -->
+        <div class="transition duration-500 ease group-hover:text-green-500">
+          what is bookmark ?
+        </div>
+        <!-- arrow  --> 
+         <div class="transition duration-500 ease group-focus:-rotate-180 group-focus:text-red-500">
+          <img src="./images/icon-arrow.svg" alt="" >
+         </div>
+     </div>
+
+     <!-- tab inner content  -->
+      <div class="overflow-hidden transition duration-500 ease group-focus:max-h-screen max-h-0 ">
+        <p class="py-2 text-justify text-grayishBlue">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime reiciendis ratione optio consequatur. Distinctio iste nemo eveniet blanditiis voluptatibus tempora tenetur laboriosam rerum iusto, nobis, optio minus, nulla quisquam aut.
+        Quo laboriosam provident quae voluptatem vero? Impedit nihil porro natus consequatur, in illum voluptate cum, officia nesciunt, et dolor laudantium vero exercitationem aperiam dolorem animi quos eius molestias quasi. Earum.
+        Fuga, impedit numquam, optio labore ut reprehenderit laborum magnam doloribus iusto amet aliquam possimus dolorum accusamus officiis commodi explicabo nobis voluptatem quod id nihil perspiciatis ipsa molestias fugit corporis. Aspernatur?
+        Rerum sit reprehenderit nesciunt, possimus quo impedit quam amet neque, vitae similique officia at. Eos inventore veritatis odio iusto harum repellendus excepturi expedita sint aliquam. Minima adipisci aperiam minus ullam?
+        Impedit quasi exercitationem non vero quod nisi quae cum iure vel, adipisci harum in ipsam iusto quidem molestiae odio nemo commodi rem minus itaque possimus corrupti fugit laboriosam delectus! Facere!
+        Veritatis nostrum est facere! Quibusdam nesciunt minus eaque molestias voluptatibus quidem ducimus quam quis voluptas nam consequuntur dolorem odit, ea natus qui officiis recusandae ipsam accusamus in aliquid sed! Vero.
+        Inventore ab veritatis, cupiditate amet a obcaecati culpa minima cum deserunt ratione voluptas. Ullam quisquam temporibus, delectus quibusdam blanditiis provident. Accusamus corrupti molestias nemo quae natus aliquid quibusdam sint asperiores?
+        Repudiandae sunt dolor aspernatur, non natus fugiat nesciunt, voluptatibus porro amet deleniti, cupiditate at doloribus harum. At, enim nisi? Consectetur recusandae at eveniet cumque possimus nesciunt quaerat voluptate voluptatem sed?
+        Vitae voluptas iusto alias. Beatae voluptate in quis! Asperiores doloremque cum at velit delectus iure? Veritatis consectetur eos neque? Voluptate sequi voluptatibus vero repellat neque quos eum veritatis unde facere?
+        Tempora porro fugit fuga quidem distinctio totam deleniti, voluptates, magni consectetur beatae nihil neque nisi tenetur quam maxime, molestiae officia incidunt! Necessitatibus ad facilis explicabo praesentium aliquid repudiandae harum error.
+        Consequuntur ratione itaque, eos saepe libero sequi voluptas. Ad, dolorem! Magnam eveniet asperiores odit vero, unde amet quisquam, optio quae corporis sequi neque ea in modi minima minus aliquam ad!
+        Libero, et laudantium doloribus aliquid repellat sunt deserunt ipsam repudiandae amet quisquam minima voluptatem vitae nobis molestiae aut tempore dicta quae, soluta odit modi aspernatur maiores quibusdam natus. Cumque, praesentium!
+        Magni labore fugiat dolores distinctio, illum laboriosam natus necessitatibus aut commodi quidem suscipit maxime exercitationem voluptatum maiores, odit iste aliquid. Odio sapiente tenetur enim quae doloremque nostrum. Perspiciatis, sequi sunt!
+        Mollitia numquam beatae magni inventore ex blanditiis sed repellendus in suscipit, nesciunt soluta velit odio, neque dignissimos quae rerum, quasi quidem impedit assumenda consequatur ducimus quibusdam ratione aut illum. Sunt.
+        Alias enim laudantium, quis est quasi eligendi voluptate molestiae ab, accusantium dolores tempora, praesentium ipsum! Mollitia, neque quod at velit molestiae, quisquam sed facere maxime aliquid atque tempore, vitae numquam.
+        Magnam labore, harum pariatur obcaecati minima optio porro animi earum a. Reprehenderit accusamus facilis, ipsum beatae expedita nam magni inventore porro sint sunt at illo maiores delectus? Rem, vel placeat!
+        Eius maiores, sint labore dignissimos tempora adipisci, veniam reiciendis officia tenetur pariatur ex quam nisi ea dolorem iusto harum? Velit quae vel magni iure vitae labore? Quo voluptas rem deleniti.
+        Minima dolores labore in possimus nihil porro voluptates corrupti recusandae aliquid ut repellat maxime voluptatem dolorem laudantium corporis delectus at ducimus ipsum reprehenderit vel, voluptate aspernatur et. Soluta, est ab.
+        Optio, inventore laudantium. Facere deleniti excepturi nemo eveniet nihil. Illo dolorum officia eius eos obcaecati enim amet asperiores in nostrum voluptatum laudantium ipsam dolor, a, minus hic aliquam ratione rerum.
+        Aperiam ipsam natus illo blanditiis quia eligendi id, rerum esse earum cum odio? Ullam saepe architecto, dolore deleniti vel, voluptatum ea magnam dignissimos, quas libero placeat assumenda aliquam mollitia voluptatem.</p>
+      </div>
+   </div>
+</diV>
+
+
+<!-- tab3 -->
+<diV class="max-w-2xl m-8 mx-auto overflow-hidden ">
+
+  <!-- tab1 -->
+   <div class="py-1 border-b outline-none group" tabindex="3">
+    <!-- tab flex container -->
+     <div class="flex items-center justify-between py-3 text-grayishBlue transition duration-500 cursor-pointer group">
+       <!-- tab title -->
+        <div class="transition duration-500 ease group-hover:text-green-500">
+         Is there a mobile app ? 
+        </div>
+        <!-- arrow  --> 
+         <div class="transition duration-500 ease group-focus:-rotate-180 group-focus:text-red-500">
+          <img src="./images/icon-arrow.svg" alt="" >
+         </div>
+     </div>
+
+     <!-- tab inner content  -->
+      <div class="overflow-hidden transition duration-500 ease group-focus:max-h-screen max-h-0 ">
+        <p class="py-2 text-justify text-grayishBlue">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime reiciendis ratione optio consequatur. Distinctio iste nemo eveniet blanditiis voluptatibus tempora tenetur laboriosam rerum iusto, nobis, optio minus, nulla quisquam aut.
+        Quo laboriosam provident quae voluptatem vero? Impedit nihil porro natus consequatur, in illum voluptate cum, officia nesciunt, et dolor laudantium vero exercitationem aperiam dolorem animi quos eius molestias quasi. Earum.
+        Fuga, impedit numquam, optio labore ut reprehenderit laborum magnam doloribus iusto amet aliquam possimus dolorum accusamus officiis commodi explicabo nobis voluptatem quod id nihil perspiciatis ipsa molestias fugit corporis. Aspernatur?
+        Rerum sit reprehenderit nesciunt, possimus quo impedit quam amet neque, vitae similique officia at. Eos inventore veritatis odio iusto harum repellendus excepturi expedita sint aliquam. Minima adipisci aperiam minus ullam?
+        Impedit quasi exercitationem non vero quod nisi quae cum iure vel, adipisci harum in ipsam iusto quidem molestiae odio nemo commodi rem minus itaque possimus corrupti fugit laboriosam delectus! Facere!
+        Veritatis nostrum est facere! Quibusdam nesciunt minus eaque molestias voluptatibus quidem ducimus quam quis voluptas nam consequuntur dolorem odit, ea natus qui officiis recusandae ipsam accusamus in aliquid sed! Vero.
+        Inventore ab veritatis, cupiditate amet a obcaecati culpa minima cum deserunt ratione voluptas. Ullam quisquam temporibus, delectus quibusdam blanditiis provident. Accusamus corrupti molestias nemo quae natus aliquid quibusdam sint asperiores?
+        Repudiandae sunt dolor aspernatur, non natus fugiat nesciunt, voluptatibus porro amet deleniti, cupiditate at doloribus harum. At, enim nisi? Consectetur recusandae at eveniet cumque possimus nesciunt quaerat voluptate voluptatem sed?
+        Vitae voluptas iusto alias. Beatae voluptate in quis! Asperiores doloremque cum at velit delectus iure? Veritatis consectetur eos neque? Voluptate sequi voluptatibus vero repellat neque quos eum veritatis unde facere?
+        Tempora porro fugit fuga quidem distinctio totam deleniti, voluptates, magni consectetur beatae nihil neque nisi tenetur quam maxime, molestiae officia incidunt! Necessitatibus ad facilis explicabo praesentium aliquid repudiandae harum error.
+        Consequuntur ratione itaque, eos saepe libero sequi voluptas. Ad, dolorem! Magnam eveniet asperiores odit vero, unde amet quisquam, optio quae corporis sequi neque ea in modi minima minus aliquam ad!
+        Libero, et laudantium doloribus aliquid repellat sunt deserunt ipsam repudiandae amet quisquam minima voluptatem vitae nobis molestiae aut tempore dicta quae, soluta odit modi aspernatur maiores quibusdam natus. Cumque, praesentium!
+        Magni labore fugiat dolores distinctio, illum laboriosam natus necessitatibus aut commodi quidem suscipit maxime exercitationem voluptatum maiores, odit iste aliquid. Odio sapiente tenetur enim quae doloremque nostrum. Perspiciatis, sequi sunt!
+        Mollitia numquam beatae magni inventore ex blanditiis sed repellendus in suscipit, nesciunt soluta velit odio, neque dignissimos quae rerum, quasi quidem impedit assumenda consequatur ducimus quibusdam ratione aut illum. Sunt.
+        Alias enim laudantium, quis est quasi eligendi voluptate molestiae ab, accusantium dolores tempora, praesentium ipsum! Mollitia, neque quod at velit molestiae, quisquam sed facere maxime aliquid atque tempore, vitae numquam.
+        Magnam labore, harum pariatur obcaecati minima optio porro animi earum a. Reprehenderit accusamus facilis, ipsum beatae expedita nam magni inventore porro sint sunt at illo maiores delectus? Rem, vel placeat!
+        Eius maiores, sint labore dignissimos tempora adipisci, veniam reiciendis officia tenetur pariatur ex quam nisi ea dolorem iusto harum? Velit quae vel magni iure vitae labore? Quo voluptas rem deleniti.
+        Minima dolores labore in possimus nihil porro voluptates corrupti recusandae aliquid ut repellat maxime voluptatem dolorem laudantium corporis delectus at ducimus ipsum reprehenderit vel, voluptate aspernatur et. Soluta, est ab.
+        Optio, inventore laudantium. Facere deleniti excepturi nemo eveniet nihil. Illo dolorum officia eius eos obcaecati enim amet asperiores in nostrum voluptatum laudantium ipsam dolor, a, minus hic aliquam ratione rerum.
+        Aperiam ipsam natus illo blanditiis quia eligendi id, rerum esse earum cum odio? Ullam saepe architecto, dolore deleniti vel, voluptatum ea magnam dignissimos, quas libero placeat assumenda aliquam mollitia voluptatem.</p>
+      </div>
+   </div>
+</diV>
+
+
+<!-- tab4 -->
+
+<diV class="max-w-2xl m-8 mx-auto overflow-hidden ">
+
+  <!-- tab1 -->
+   <div class="py-1 border-b outline-none group" tabindex="4">
+    <!-- tab flex container -->
+     <div class="flex items-center justify-between py-3 text-grayishBlue transition duration-500 cursor-pointer group">
+       <!-- tab title -->
+        <div class="transition duration-500 ease group-hover:text-green-500">
+         What about other chromium browser? 
+        </div>
+        <!-- arrow  --> 
+         <div class="transition duration-500 ease group-focus:-rotate-180 group-focus:text-red-500">
+          <img src="./images/icon-arrow.svg" alt="" >
+         </div>
+     </div>
+
+     <!-- tab inner content  -->
+      <div class="overflow-hidden transition duration-500 ease group-focus:max-h-screen max-h-0 ">
+        <p class="py-2 text-justify text-grayishBlue">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime reiciendis ratione optio consequatur. Distinctio iste nemo eveniet blanditiis voluptatibus tempora tenetur laboriosam rerum iusto, nobis, optio minus, nulla quisquam aut.
+        Quo laboriosam provident quae voluptatem vero? Impedit nihil porro natus consequatur, in illum voluptate cum, officia nesciunt, et dolor laudantium vero exercitationem aperiam dolorem animi quos eius molestias quasi. Earum.
+        Fuga, impedit numquam, optio labore ut reprehenderit laborum magnam doloribus iusto amet aliquam possimus dolorum accusamus officiis commodi explicabo nobis voluptatem quod id nihil perspiciatis ipsa molestias fugit corporis. Aspernatur?
+        Rerum sit reprehenderit nesciunt, possimus quo impedit quam amet neque, vitae similique officia at. Eos inventore veritatis odio iusto harum repellendus excepturi expedita sint aliquam. Minima adipisci aperiam minus ullam?
+        Impedit quasi exercitationem non vero quod nisi quae cum iure vel, adipisci harum in ipsam iusto quidem molestiae odio nemo commodi rem minus itaque possimus corrupti fugit laboriosam delectus! Facere!
+        Veritatis nostrum est facere! Quibusdam nesciunt minus eaque molestias voluptatibus quidem ducimus quam quis voluptas nam consequuntur dolorem odit, ea natus qui officiis recusandae ipsam accusamus in aliquid sed! Vero.
+        Inventore ab veritatis, cupiditate amet a obcaecati culpa minima cum deserunt ratione voluptas. Ullam quisquam temporibus, delectus quibusdam blanditiis provident. Accusamus corrupti molestias nemo quae natus aliquid quibusdam sint asperiores?
+        Repudiandae sunt dolor aspernatur, non natus fugiat nesciunt, voluptatibus porro amet deleniti, cupiditate at doloribus harum. At, enim nisi? Consectetur recusandae at eveniet cumque possimus nesciunt quaerat voluptate voluptatem sed?
+        Vitae voluptas iusto alias. Beatae voluptate in quis! Asperiores doloremque cum at velit delectus iure? Veritatis consectetur eos neque? Voluptate sequi voluptatibus vero repellat neque quos eum veritatis unde facere?
+        Tempora porro fugit fuga quidem distinctio totam deleniti, voluptates, magni consectetur beatae nihil neque nisi tenetur quam maxime, molestiae officia incidunt! Necessitatibus ad facilis explicabo praesentium aliquid repudiandae harum error.
+        Consequuntur ratione itaque, eos saepe libero sequi voluptas. Ad, dolorem! Magnam eveniet asperiores odit vero, unde amet quisquam, optio quae corporis sequi neque ea in modi minima minus aliquam ad!
+        Libero, et laudantium doloribus aliquid repellat sunt deserunt ipsam repudiandae amet quisquam minima voluptatem vitae nobis molestiae aut tempore dicta quae, soluta odit modi aspernatur maiores quibusdam natus. Cumque, praesentium!
+        Magni labore fugiat dolores distinctio, illum laboriosam natus necessitatibus aut commodi quidem suscipit maxime exercitationem voluptatum maiores, odit iste aliquid. Odio sapiente tenetur enim quae doloremque nostrum. Perspiciatis, sequi sunt!
+        Mollitia numquam beatae magni inventore ex blanditiis sed repellendus in suscipit, nesciunt soluta velit odio, neque dignissimos quae rerum, quasi quidem impedit assumenda consequatur ducimus quibusdam ratione aut illum. Sunt.
+        Alias enim laudantium, quis est quasi eligendi voluptate molestiae ab, accusantium dolores tempora, praesentium ipsum! Mollitia, neque quod at velit molestiae, quisquam sed facere maxime aliquid atque tempore, vitae numquam.
+        Magnam labore, harum pariatur obcaecati minima optio porro animi earum a. Reprehenderit accusamus facilis, ipsum beatae expedita nam magni inventore porro sint sunt at illo maiores delectus? Rem, vel placeat!
+        Eius maiores, sint labore dignissimos tempora adipisci, veniam reiciendis officia tenetur pariatur ex quam nisi ea dolorem iusto harum? Velit quae vel magni iure vitae labore? Quo voluptas rem deleniti.
+        Minima dolores labore in possimus nihil porro voluptates corrupti recusandae aliquid ut repellat maxime voluptatem dolorem laudantium corporis delectus at ducimus ipsum reprehenderit vel, voluptate aspernatur et. Soluta, est ab.
+        Optio, inventore laudantium. Facere deleniti excepturi nemo eveniet nihil. Illo dolorum officia eius eos obcaecati enim amet asperiores in nostrum voluptatum laudantium ipsam dolor, a, minus hic aliquam ratione rerum.
+        Aperiam ipsam natus illo blanditiis quia eligendi id, rerum esse earum cum odio? Ullam saepe architecto, dolore deleniti vel, voluptatum ea magnam dignissimos, quas libero placeat assumenda aliquam mollitia voluptatem.</p>
+      </div>
+   </div>
+</diV>
+
+ </div>
+</section>
+
+
+
+    </body>
+</html>
+<script src="./index.js"></script>
